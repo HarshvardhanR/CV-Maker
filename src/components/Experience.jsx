@@ -125,10 +125,10 @@ export default function Experience({preview}) {
             )}
           </div>
           <div className="trashDiv">
-          {preview === "off" && ( // Hide buttons when preview is "on"
+          {preview === "off" && (
             <>
               <button
-                onClick={() => handleDelete(el.id)} // Pass id to delete
+                onClick={() => handleDelete(el.id)}
                 className="editButton"
               >
               <i className="fa-solid fa-trash"></i>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export default function Skills(){
+// eslint-disable-next-line react/prop-types
+export default function Skills({preview}){
 
     const[toggle, setToggle] = useState(false);
     const[value, setValue] = useState("HTML - CSS - JavaScript - Figma - ReactJS - Webpack")
@@ -18,12 +19,12 @@ export default function Skills(){
             {toggle?(
                 <>
                 <textarea onChange={handleChange}className="skillsInput" value={value} placeholder="enter your skills here"></textarea>
-                <button onClick={handleToggle}className="editSaveButton skillButton1">Save</button>
+                {preview==="off" && (<button onClick={handleToggle}className="editSaveButton skillButton1">Save</button>)}
                 </>
             ):(
                 <>
                 <p>{value}</p>
-                <button onClick={handleToggle} className="editButton skillButton"><i className="fa-solid fa-pen-to-square"></i></button>
+                {preview==="off" && (<button onClick={handleToggle} className="editButton skillButton"><i className="fa-solid fa-pen-to-square"></i></button>)}
                 </>
             )}
         </div>

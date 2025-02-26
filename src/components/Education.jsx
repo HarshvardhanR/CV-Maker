@@ -1,6 +1,7 @@
 import { useState } from "react"
 
-export default function Education(){
+// eslint-disable-next-line react/prop-types
+export default function Education({preview}){
     let demoEducation = [
         {
             id:0,
@@ -67,8 +68,12 @@ export default function Education(){
                             </div>
                         </div>
                         <div className="schoolRightDiv">
-                            <button onClick={(e) => handleDelete(e, element.id)} className="editButton"><i className="fa-solid fa-trash"></i></button>
-                            <button onClick={(e) => handleToggle(e, element.id)}className="editSaveButton">Save</button>
+                            {preview==="off" && (
+                                <>
+                                    <button onClick={(e) => handleDelete(e, element.id)} className="editButton"><i className="fa-solid fa-trash"></i></button>
+                                    <button onClick={(e) => handleToggle(e, element.id)}className="editSaveButton">Save</button>
+                                </>
+                            )}
                         </div>
                         </>
                     ) : (
@@ -82,14 +87,19 @@ export default function Education(){
                             </div>
                         </div>
                         <div className="schoolRightDiv1">
-                            <button onClick={(e) => handleDelete(e, element.id)} className="editButton"><i className="fa-solid fa-trash"></i></button>
-                            <button onClick={(e) => handleToggle(e, element.id)} className="editButton"><i className="fa-solid fa-pen-to-square"></i></button>
+                            {preview==="off" && ( 
+                                <>
+                                    <button onClick={(e) => handleDelete(e, element.id)} className="editButton"><i className="fa-solid fa-trash"></i></button>
+                                    <button onClick={(e) => handleToggle(e, element.id)} className="editButton"><i className="fa-solid fa-pen-to-square"></i></button>
+                                </>
+                            )}
                         </div>
                         </>
                     )}
                 </div>
             ))}
-            <button onClick={handleAddition} className="addButton">Add</button>
+            {preview==="off" && (<button onClick={handleAddition} className="addButton">Add</button>)}
+            
         </>
     );
     
