@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bg-div {
+  background-color: black;
+  opacity: 0.9;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.onbg-div {
+  height: 100vh;
+  width: 50%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 400px;
+  z-index: 1000;
+  box-shadow: 2px 0 15px antiquewhite;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.headerDiv {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.toggleButtonGreen {
+  width: 50px;
+  height: 30px;
+  font-size: 15px;
+  border: 2px solid black;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-weight: bolder;
+  color: green;
+}
+
+.toggleButtonRed {
+  width: 50px;
+  height: 30px;
+  font-size: 15px;
+  border: 2px solid black;
+  border-radius: 2vh;
+  cursor: pointer;
+  font-weight: bolder;
+  color: brown;
+}
+
+.previewName{
+  margin-right: 15px;
+}
+
+.nameSection{
+  margin-left: 50px;
+  margin-right: 60px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.nameSection p{
+  font-size: 2rem;
+}
+
+.editButton{
+  all: unset;
+  font-size: 1.3rem;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.input{
+  padding: 10px;
+}
+
+.desc-input{
+  margin-left: 50px;
+  margin-right: 60px;
+  height: 80px;
+  width: 550px;
+  padding:10px;
+  overflow: auto;
+  resize: vertical;
+}
+
+.emailSection{
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 60px;
+}
+
+.email-input{
+  padding: 10px;
+  width: 180px;
+  margin-right: 20px;
+}
+
+.editSaveButton{
+  width: 50px;
+  height: 30px;
+  border-radius: 2vh;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.editDescInput{
+  margin-left: 50px;
+  margin-right: 60px;
+}
+
+.editEmailSection{
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 60px;
+  display: flex;
+}
+
+.editemailInput{
+  margin-right: 60px;
+}
+
+.expDiv{
+  padding-top: 10px;
+  width: 120px;
+  font-size: 1.3rem;
+  margin-top: 30px;
+  margin-left: 50px;
+  font-weight: bold;
+}
+
+.contentDiv{
+  margin-top: 30px;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.expContentDiv{
+  margin-top: 38px;
+  width: 600px;
+}
+
+.expParent{
+  display: flex;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  width: 550px;
+}
+
+.trashDiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  margin-left: 10px;
+}
+
+.fieldInput{
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.jobDescText{
+  height: 90px;
+  width: 427px;
+  padding:4px;
+  overflow: auto;
+  resize: vertical;
+}
+
+.flexer{
+  display: flex;
+}
+
+.editfieldInput1{
+  font-size: 1.2rem;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.editfieldInput2{
+  font-size: 1rem;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.addButton{
+  margin-left: 15px;
+  height: 40px;
+  width: 50px;
+  border-radius: 2vh;
+  cursor: pointer;
+}
+
+.jobInfoDiv{
+  margin-right: 12px;
+}
+
+.schoolDiv{
+  display: flex;
+  font-size: 1rem;
+}
+
+.schooler{
+  font-size: 1.2rem;
+}
+
+.schoolParent{
+  margin-bottom: 20px;
+  margin-left: 20px;
+  display: flex;
+}
+
+.inputSchool1{
+  margin-bottom: 10px;
+}
+
+.schoolRightDiv{
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.schoolRightDiv1{
+  display: flex;
+  flex-direction: column;
+  margin-left: 270px;
+}
+
+.skillsInput{
+  height: 80px;
+  width: 500px;
+  padding:10px;
+  overflow: auto;
+  resize: vertical;
+}
+
+.skillDiv{
+  display: flex;
+}
+
+.skillButton{
+  margin-left: 120px;
+}
+
+.skillButton1{
+  margin-left: 20px;
+}
