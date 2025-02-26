@@ -23,7 +23,8 @@ let arr = [
   },
 ];
 
-export default function Experience() {
+// eslint-disable-next-line react/prop-types
+export default function Experience({preview}) {
   const [expArray, setExpArray] = useState(arr);
 
   function handleChange(e, id) {
@@ -124,25 +125,30 @@ export default function Experience() {
             )}
           </div>
           <div className="trashDiv">
-          <button
-              onClick={() => handleDelete(el.id)} // Pass id to delete
-              className="editButton"
-            >
+          {preview === "off" && ( // Hide buttons when preview is "on"
+            <>
+              <button
+                onClick={() => handleDelete(el.id)} // Pass id to delete
+                className="editButton"
+              >
               <i className="fa-solid fa-trash"></i>
-            </button>
+              </button>
 
-            <button
-              onClick={() => handleClick(el.id)}
-              className={el.isEditing ? "editSaveButton" : "editButton"}
-            >
+              <button
+                onClick={() => handleClick(el.id)}
+                className={el.isEditing ? "editSaveButton" : "editButton"}
+              >
               {el.isEditing ? "Save" : <i className="fa-solid fa-pen-to-square"></i>}
-            </button>
+              </button>
+            </>
+          )}
+
           </div>
         </div>
       ))}
-      <button onClick={handleAddition} className="addButton">
+      {preview==="off" && (<button onClick={handleAddition} className="addButton">
         Add
-      </button>
+      </button>)}
     </>
   );
 }

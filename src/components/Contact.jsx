@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-export default function Contact() {
+// eslint-disable-next-line react/prop-types
+export default function Contact({preview}) {
     const [formData, setFormData] = useState({
         name: "Your Name",
         description: "I am a [Current Position], currently working at [Current Company]. I help companies build products from zero to one. This is a brief description about you. Write some details about yourself, and make it meaningful. Maximum 3 lines of text.",
@@ -31,7 +32,7 @@ export default function Contact() {
                         value={formData.name} 
                         onChange={handleChange}
                     />
-                    <button className="editSaveButton" onClick={handleEditingStatus}>Save</button>     
+                    {preview === "off" && (<button onClick={handleEditingStatus} className="editSaveButton">Save</button>)}     
                 </div>
             
                 <textarea 
@@ -70,7 +71,7 @@ export default function Contact() {
                 <>
                     <div className = "nameSection">
                         <p>{formData.name}</p> 
-                        <button className="editButton" onClick={handleEditingStatus}><i className="fa-solid fa-pen-to-square"></i></button>    
+                        {preview==="off" && (<button className="editButton" onClick={handleEditingStatus}><i className="fa-solid fa-pen-to-square"></i></button>)}    
                     </div>
                     <p className="editDescInput">
                         {formData.description}
